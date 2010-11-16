@@ -1,0 +1,50 @@
+!!!
+%html{ :xmlns => "http://www.w3.org/1999/xhtml", :lang => "en", "xml:lang" => "en"}
+  %head
+    %title Pixel Tape Message Maker
+    %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"} 
+    %link{:type=>"text/css", :rel=>"stylesheet", :href=>"/css/pixeltape.css"}
+    %script{:type => "text/javascript",
+            :src  => "http://code.jquery.com/jquery-1.4.2.js"}
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    :javascript
+       function generateMessage(resource, size)
+      {
+       $('#message-image').attr('src', '');
+       $('#message-image').hide();
+       $('#message-image').load(function() { $('#message-image').show(); });
+       $('#message-image').attr('src', '/'+ resource +'/' + encodeURIComponent($('#message1').val()) + '/' + size );
+       console.log(encodeURIComponent($('#message1').val()));
+      }
+  %body
+    #container
+      #logo
+        %img{:src=>"/images/pixel-tape-message-maker-banner.jpg"}
+      .fieldset
+        .field
+          %input.message-line{:id=>"message1", :type=>"text", :placeholder=>"Type your message here"}
+          -# %input.message-line{:id=>"message2", :type=>"text", :placeholder=>"Line 2"}
+          -# %input.message-line{:id=>"message3", :type=>"text", :placeholder=>"Line 3"}
+          %a{:href=>"#", :onclick=>"generateMessage('label', '225'); return false;"} Make it!
+      #message-placeholder
+        %img{:src=>"placeholder.png", :id=>"message-image"}
+      #download
+        Size it! <br />
+        %a{:href=>"#", :onclick=>"generateMessage('label', '25'); return false;"} Nano
+        %a{:href=>"#", :onclick=>"generateMessage('label', '75'); return false;"} Tiny
+        %a{:href=>"#", :onclick=>"generateMessage('label', '150'); return false;"} Small
+        %a{:href=>"#", :onclick=>"generateMessage('label', '225'); return false;"} Medium
+        %a{:href=>"#", :onclick=>"generateMessage('label', '300'); return false;"} Large
+        %a{:href=>"#", :onclick=>"generateMessage('label', '395'); return false;"} Full Size
+      #footer
+        %p Developed by RocketAce.net
+        %p Powered by Sinatra on Heroku

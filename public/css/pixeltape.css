@@ -1,0 +1,27 @@
+body {
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+}
+
+#container {
+width: 940px;
+margin: 0 auto;
+padding: 10px;
+}
+
+#logo { text-align: center; }
+
+.field { float: left; font-size: 1.2em; width: 100%; margin: 20px; }
+
+.field input { width: 600px; font-size: 2em; text-align: left;}
+
+.fieldset { text-align: center;}
+
+#message-line {width:600px;}
+
+#download { text-align: center; margin: 10px;}
+
+#message-placeholder { background: url(wait.png); height: 495px; width: 100%; margin: 0 auto; }
+
+#footer { font-size: 0.8em; color: #5A5A5A; text-align: center; }
