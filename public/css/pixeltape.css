@@ -27,6 +27,6 @@ a {
 
 #download { text-align: center; margin: 10px;}
 
-#message-placeholder { background: url(wait.png); height: 495px; width: 100%; margin: 0 auto; }
+#message-placeholder { height: 495px; width: 100%; margin: 0 auto; text-align:center; vertical-align:middle; }
 
 #footer { font-size: 0.8em; color: #5A5A5A; text-align: center; margin-top: 35px;}
