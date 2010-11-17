@@ -9,6 +9,11 @@ width: 940px;
 margin: 0 auto;
 padding: 10px;
 }
+a {
+	color: #006699;
+	text-decoration: none;
+	font-size: 1.5em;
+}
 
 #logo { text-align: center; }
 
@@ -24,4 +29,4 @@ padding: 10px;
 
 #message-placeholder { background: url(wait.png); height: 495px; width: 100%; margin: 0 auto; }
 
-#footer { font-size: 0.8em; color: #5A5A5A; text-align: center; }
+#footer { font-size: 0.8em; color: #5A5A5A; text-align: center; margin-top: 35px;}

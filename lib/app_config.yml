@@ -180,9 +180,9 @@
     :width: 315
     :height: 395
   Y: 
-    :x: 7379
+    :x: 7339
     :y: 0
-    :width: 522
+    :width: 316
     :height: 395
   N: 
     :x: 4012
@@ -407,13 +407,13 @@
   J: 
     :x: 2641
     :y: 0
-    :width: 197
+    :width: 264
     :height: 395
-  .: 
+  ".": 
     :x: 15433
     :y: 0
-    :width: 197
-    :height: 350
+    :width: 159
+    :height: 395
 :alternate_char_data: 
   "&": --AMP--
 :not_found_char_data:

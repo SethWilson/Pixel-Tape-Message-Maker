@@ -20,7 +20,7 @@
        function generateMessage(resource, size)
       {
        $('#message-image').attr('src', '');
-       $('#message-image').hide();
+       $('#message-image').attr('src', '/images/ajax-loader.gif');
        $('#message-image').load(function() { $('#message-image').show(); });
        $('#message-image').attr('src', '/'+ resource +'/' + encodeURIComponent($('#message1').val()) + '/' + size );
        console.log(encodeURIComponent($('#message1').val()));
@@ -38,13 +38,22 @@
       #message-placeholder
         %img{:src=>"placeholder.png", :id=>"message-image"}
       #download
-        Size it! <br />
-        %a{:href=>"#", :onclick=>"generateMessage('label', '25'); return false;"} Nano
-        %a{:href=>"#", :onclick=>"generateMessage('label', '75'); return false;"} Tiny
-        %a{:href=>"#", :onclick=>"generateMessage('label', '150'); return false;"} Small
-        %a{:href=>"#", :onclick=>"generateMessage('label', '225'); return false;"} Medium
-        %a{:href=>"#", :onclick=>"generateMessage('label', '300'); return false;"} Large
+        %p
+          Size it! 
+        %a{:href=>"#", :onclick=>"generateMessage('label', '25'); return false;"} Nano :
+        %a{:href=>"#", :onclick=>"generateMessage('label', '75'); return false;"} Tiny :
+        %a{:href=>"#", :onclick=>"generateMessage('label', '150'); return false;"} Small :  
+        %a{:href=>"#", :onclick=>"generateMessage('label', '225'); return false;"} Medium : 
+        %a{:href=>"#", :onclick=>"generateMessage('label', '300'); return false;"} Large :
         %a{:href=>"#", :onclick=>"generateMessage('label', '395'); return false;"} Full Size
       #footer
-        %p Developed by RocketAce.net
-        %p Powered by Sinatra on Heroku
+        %p
+          %img{:src=>"/images/rocketace-logo.png", :alt=>"RocketAce.net Ltd."}
+        %p
+          %img{:src=>"/images/developedby.jpg", :alt=>"Developed by RocketAce.net Ltd."}
+        %p
+          %img{:src=>"/images/poweredby.jpg", :alt=>"Powered by Sinatra on Heroku"}
+        %p
+          %a{:href=>"#"} Back Story :
+          %a{:href=>"mailto:seth@rocketace.net"} Contact :
+          %a{:href=>"https://github.com/SethWilson/Pixel-Tape-Message-Maker"} GitHub
